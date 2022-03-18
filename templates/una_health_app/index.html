@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p> test</p>
-{% endblock content %}
+<form action="/api/v1/levels" method="post">
+    {% csrf_token %}
+    <label for="user_id">Please Select User:</label>
+    <select name="user_id" id="user_id">
+        {% for user in users %}
+        <option value="{{user}}"> {{user}} </option>
+        {% endfor %}
+    </select>
+    <button type="submit">View Levels</button>
+    </form>
+    {% block userdata %}
+
+    {% endblock userdata %}
+    {% endblock content %}
