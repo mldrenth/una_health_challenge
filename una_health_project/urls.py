@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('api/v1/levels', include('una_health_app.urls')),
+    path('api/v1/levels?order_by=glucose_history', include('una_health_app.urls')),
     path('admin/', admin.site.urls),
 ]
