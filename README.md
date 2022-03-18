@@ -19,5 +19,5 @@ Project for Una Health
 
 ## API
 - For Detail Value Overview for User go to: http://127.0.0.1:8000/api/v1/levels
-- For Value by Id go to: http://127.0.0.1:8000/api/v1/levels/<id>
+- For Value by Id go to: http://127.0.0.1:8000/api/v1/levels/{id}
 
