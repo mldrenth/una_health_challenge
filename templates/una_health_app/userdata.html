@@ -1,0 +1,22 @@
+{% extends 'una_health_app/index.html' %}
+{% block userdata %}
+    <p>User: {{user}}</p>
+    <table>
+    <tr>
+        <th>Device</th>
+        <th>Serial Number</th>
+        <th>Time</th>
+        <th>Recording Type</th>
+        <th><a href="?order_by=glucose_history">Glucose History</a></th>
+    </tr>
+    {% for value in glucose_values  %}
+        <tr>
+            <td>{{value.device}}</td>
+            <td>{{value.serial_number}}</td>
+            <td>{{value.time_stamp}}</td>
+            <td>{{value.recording_type}}</td>
+            <td>{{value.glucose_history}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock userdata %}
