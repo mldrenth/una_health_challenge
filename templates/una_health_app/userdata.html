@@ -7,16 +7,18 @@
         <th>Serial Number</th>
         <th>Time</th>
         <th>Recording Type</th>
-        <th><a href="?order_by=glucose_history">Glucose History</a></th>
+        <th>Glucose History</th>
     </tr>
     {% for value in glucose_values  %}
-        <tr>
+    <tr>
             <td>{{value.device}}</td>
             <td>{{value.serial_number}}</td>
             <td>{{value.time_stamp}}</td>
             <td>{{value.recording_type}}</td>
             <td>{{value.glucose_history}}</td>
-        </tr>
+            <td><a href="levels/{{value.id}}">Show Info</a></td>
+        
+        </tr></a>
     {% endfor %}
     </table>
 {% endblock userdata %}

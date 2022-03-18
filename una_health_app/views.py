@@ -16,3 +16,6 @@ def index(request):
     else:
         return render(request, 'una_health_app/index.html', locals())
 
+def show_value_by_id(request, value_id = None):
+    glucose_value = GlucoseValue.objects.get(id = value_id)
+    return render(request, 'una_health_app/show_value_by_id.html', locals())
