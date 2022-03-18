@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <ul>
+        <li>Device: {{glucose_value.device}}</li>
+        <li>Serial Number: {{glucose_value.serial_number}}</li>
+        <li>Time Stamp: {{glucose_value.time_stamp}}</li>
+        <li>Recording Type: {{glucose_value.recording_type}}</li>
+        <li>Glucose History: {{glucose_value.glucose_history}}</li>
+        <li>User: {{glucose_value.user}}</li>
+     
+    </ul>
+{% endblock content %}
